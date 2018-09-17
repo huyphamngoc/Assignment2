@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="UWPConsole" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="UWPConsole">
+				<NamedResource name="ConsolePresenter.xbf" uri="ms-resource://UWPConsole/Files/UWPConsole/ConsolePresenter.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="UWPConsole.xr.xml" uri="ms-resource://UWPConsole/Files/UWPConsole/UWPConsole.xr.xml">
+					<Candidate type="Path">
+						<Value>UWPConsole\UWPConsole.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

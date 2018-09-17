@@ -1,0 +1,35 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Assignment2.View.mp4Form"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment2.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <Button x:ConnectionId='2'                  >Choose files</Button>
+
+            <ListView x:ConnectionId='3' Name="ListViewMusic"
+                      Margin="0, 50, 0, 0"
+                                                                
+                                                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock>Tên</TextBlock>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <MediaElement x:ConnectionId='4' Name="VideoPlayer" 
+                          AutoPlay="True"
+                          AreTransportControlsEnabled="True"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

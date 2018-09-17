@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Assignment2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}" >
+            <Pivot.Title>
+                <Grid>
+                    <TextBlock Text="Song That I Like" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                </Grid>
+            </Pivot.Title>
+            <Pivot.RightHeader>
+                <CommandBar OverflowButtonVisibility="Collapsed" Background="Transparent">
+                    <AppBarButton Icon="Add"/>
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="Edit" />
+                    <AppBarButton Icon="Delete" />
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="Save"/>
+                </CommandBar>
+            </Pivot.RightHeader>
+
+            <PivotItem Header="Nghe Nhạc Trong Máy">
+                <Frame x:ConnectionId='11' x:Name="mp3Frame">
+
+                </Frame>
+            </PivotItem>
+
+            <!-- UserForm Frame -->
+            <PivotItem Header="Video Trong Máy">
+                <Frame x:ConnectionId='10' x:Name="mp4Frame">
+
+                </Frame>
+            </PivotItem>
+            <!-- /UserForm Frame             -->
+
+        </Pivot>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FFDEDEDE" Height="25" Margin="0,0,0,44">
+            <TextBlock>
+                Now Playing:
+            </TextBlock>
+            <TextBlock x:ConnectionId='9' x:Name="nowPlaying" Margin="10,0,0,0">
+                ...
+            </TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FFDEDEDE" Height="45">
+            <AppBarSeparator/>
+            <ProgressBar x:ConnectionId='3' x:Name="Progress" Height="15" Width="320"></ProgressBar>
+            <AppBarSeparator/>
+            <AppBarButton x:ConnectionId='4' Icon="Previous"                  ToolTipService.ToolTip="Previous Song"/>
+            <AppBarButton x:ConnectionId='5' x:Name="PlayButton" Icon="Play"                    ToolTipService.ToolTip="Play/Pause Song" />
+            <AppBarButton x:ConnectionId='6' Icon="Next"                  ToolTipService.ToolTip="Next Song"/>
+            <AppBarSeparator/>
+            <Slider x:ConnectionId='7' x:Name="volumeSlider" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center" Height="36"                                          ToolTipService.ToolTip="Volume"/>
+            <TextBlock x:ConnectionId='8' x:Name="volume" Width="28" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" TextAlignment="Right">
+                100
+            </TextBlock>
+            <TextBlock Width="15" Height="20">
+                %
+            </TextBlock>
+            <AppBarSeparator/>
+        </StackPanel>
+        <MediaElement x:ConnectionId='2' Width="600" x:Name="MediaPlayer">
+        </MediaElement>
+    </Grid>
+</Page>
+
